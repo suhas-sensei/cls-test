@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 
-function Homepage(){
+
+function Login(){
     return(
     <div className="font-Noto-sans">
       <nav className="flex items-center justify-between p-4 bg-gray-800">
@@ -18,18 +19,14 @@ function Homepage(){
           
         </div>
       </nav>
-      <div className="flex items-center justify-center h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold">Welcome to Classmate</h1>
-          <p className="text-lg mt-4">The best platform to connect with your classmates</p>
-          <Link to="/login">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Get Started</button>
-          </Link>
-          
-        </div></div>
-      
+      <div className="flex flex-col items-center mt-10">
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Teacher</button>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Student</button>
+      </div>
+      <div className="flex justify-center mt-10">
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Are you an admin?</button>
+      </div>
     </div>
-    );     
+    );
 }
-
-export default Homepage;
+export default Login;
